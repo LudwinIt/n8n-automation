@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: n8n-automation
+    env: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: N8N_HOST
+        value: 0.0.0.0
+      - key: N8N_PORT
+        value: 10000
+      - key: N8N_PROTOCOL
+        value: https
+      - key: NODE_ENV
+        value: production
+      - key: N8N_ENCRYPTION_KEY
+        value: mysecretkey123456789
+      - key: N8N_USER_MANAGEMENT_DISABLED
+        value: true
